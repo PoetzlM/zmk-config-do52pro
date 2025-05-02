@@ -41,11 +41,11 @@
 
         base_layer {
             bindings = <
-&kp NUMBER_1  &kp N2              &kp N3             &kp N4            &kp N5           &kp N6         &kp N7     &kp N8             &kp N9         &kp N0             &kp QUESTION   &kp DELETE
-&kp TAB       &kp Q               &kp W              &kp E             &kp R            &kp T          &kp Z      &mt DE_U_UMLAUT U  &kp I          &mt DE_O_UMLAUT O  &kp P          &kp BSPC
-&kp CAPSLOCK  &mt DE_A_UMLAUT A   &kp S              &kp D             &kp F            &kp G          &kp H      &kp J              &kp K          &kp L              &kp SEMI       &kp ENTER
-&kp LSHFT     &kp Y               &kp X              &kp C             &kp V            &kp B          &kp N      &kp M              &kp SEMICOLON  &kp DE_PERIOD      &kp MINUS      &kp RSHFT
-&kp ESCAPE    &kp LEFT_WIN                                             &mo 1            &mkp LCLK      &kp SPACE  &mo 2                                                &kp RIGHT_ALT  &kp RCTRL
+&kp DE_N1     &kp DE_N2           &kp DE_N3          &kp DE_N4         &kp N5           &kp N6         &kp DE_N7  &kp DE_N8          &kp DE_N9      &kp DE_N0          &kp DE_QUESTION  &kp DELETE
+&kp TAB       &kp Q               &kp W              &kp E             &kp R            &kp T          &kp Z      &mt DE_U_UMLAUT U  &kp I          &mt DE_O_UMLAUT O  &kp P            &kp BSPC
+&kp CAPSLOCK  &mt DE_A_UMLAUT A   &kp S              &kp D             &kp F            &kp G          &kp H      &kp J              &kp K          &kp L              &kp SEMI         &kp ENTER
+&mo 9         &kp Y               &kp X              &kp C             &kp V            &kp B          &kp N      &kp M              &kp SEMICOLON  &kp DE_PERIOD      &kp MINUS        &kp RSHFT
+&kp ESCAPE    &kp LEFT_WIN                                             &mo 1            &mkp LCLK      &kp SPACE  &mo 2                                                &kp DELETE       &kp RCTRL
               &kp LA(LEFT_ARROW)  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp LA(RIGHT)  &kp LEFT   &kp DOWN           &kp C_MUTE     &kp UP             &kp RIGHT
             >;
         };
@@ -135,6 +135,17 @@
 &mms MS_TP_PTS_THRESHOLD_DECR  &mms MS_TP_PTS_THRESHOLD_INCR  &trans  &mms MS_TP_VALUE6_DECR  &mms MS_TP_VALUE6_INCR       &trans                       &trans     &trans     &trans  &trans  &trans     &trans
 &trans                         &trans                                                         &trans                       &trans                       &mkp LCLK  &mkp RCLK                  &mkp MCLK  &tog MOUSE_TP_SET
                                &trans                         &trans  &trans                  &trans                       &trans                       &trans     &trans     &trans  &trans  &trans
+            >;
+        };
+
+        shiftLayer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans
+&trans  &trans                  &trans  &trans  &trans  &trans                  &kp BACKSPACE  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
