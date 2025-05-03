@@ -47,19 +47,19 @@
 &kp TAB        &kp Q              &kp W              &kp E      &kp R            &kp T           &kp Z      &mt DE_U_UMLAUT U  &kp I          &mt DE_O_UMLAUT O  &kp P                 &kp PLUS
 &kp LESS_THAN  &mt DE_A_UMLAUT A  &kp S              &kp D      &kp F            &kp G           &kp H      &kp J              &kp K          &kp L              &kp DE_O_UMLAUT       &kp ENTER
 &mo 1          &kp Y              &kp X              &kp C      &kp V            &kp B           &kp N      &kp M              &kp SEMICOLON  &kp DE_PERIOD      &kp MINUS             &mo 1
-&kp ESCAPE     &kp LEFT_WIN                                     &mo 2            &mo 5           &kp SPACE  &mo 2                                                &mt BACKSPACE DELETE  &mo 4
+&kp ESCAPE     &kp LEFT_WIN                                     &mo 2            &mo 4           &kp SPACE  &mo 2                                                &mt BACKSPACE DELETE  &mo 3
                &kp LA(C_MUTE)     &kp C_VOLUME_DOWN  &none      &kp C_VOLUME_UP  &kp LA(K_MUTE)  &none      &none              &none          &none              &none
             >;
         };
 
         shift_layer {
             bindings = <
-&kp EXCL          &kp DQT    &kp DE_SECTION  &kp DLLR   &kp PRCNT  &kp AMPS   &kp FSLH   &kp LPAR   &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp QUESTION         &kp APOS
-&trans            &kp LS(Q)  &kp LS(W)       &kp LS(E)  &kp LS(R)  &kp LS(T)  &kp LS(Z)  &kp LS(U)  &kp LS(I)              &kp LS(O)  &kp LS(P)            &kp ASTRK
-&kp GREATER_THAN  &kp LS(A)  &kp LS(S)       &kp LS(D)  &kp LS(F)  &kp LS(G)  &kp LS(H)  &kp LS(J)  &kp LS(K)              &kp LS(L)  &kp LS(DE_O_UMLAUT)  &trans
-&trans            &kp LS(Y)  &kp LS(X)       &kp LS(C)  &kp LS(V)  &kp LS(B)  &kp LS(N)  &kp LS(M)  &kp SEMI               &kp COLON  &kp UNDER            &trans
-&trans            &trans                                &trans     &trans     &trans     &trans                                       &trans               &trans
-                  &trans     &trans          &trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans
+&kp EXCL          &kp DQT                    &kp DE_SECTION  &kp DLLR   &kp PRCNT  &kp AMPS   &kp FSLH   &kp LPAR                   &kp RIGHT_PARENTHESIS  &kp EQUAL                  &kp QUESTION         &kp APOS
+&trans            &kp LS(Q)                  &kp LS(W)       &kp LS(E)  &kp LS(R)  &kp LS(T)  &kp LS(Z)  &mt LS(DE_U_UMLAUT) LS(U)  &kp LS(I)              &mt LS(DE_O_UMLAUT) LS(O)  &kp LS(P)            &kp ASTRK
+&kp GREATER_THAN  &mt LS(DE_A_UMLAUT) LS(A)  &kp LS(S)       &kp LS(D)  &kp LS(F)  &kp LS(G)  &kp LS(H)  &kp LS(J)                  &kp LS(K)              &kp LS(L)                  &kp LS(DE_O_UMLAUT)  &trans
+&trans            &kp LS(Y)                  &kp LS(X)       &kp LS(C)  &kp LS(V)  &kp LS(B)  &kp LS(N)  &kp LS(M)                  &kp SEMI               &kp COLON                  &kp UNDER            &trans
+&trans            &trans                                                &trans     &trans     &trans     &trans                                                                       &trans               &trans
+                  &trans                     &trans          &trans     &trans     &trans     &trans     &trans                     &trans                 &trans                     &trans
             >;
         };
 
@@ -68,53 +68,31 @@
 &none     &kp DE_SUPER2  &kp DE_SUPER3  &none     &none         &none   &kp LEFT_BRACE  &kp LBKT        &kp RIGHT_BRACKET  &kp RIGHT_BRACE   &kp BSLH           &kp GRAVE
 &none     &kp AT         &none          &kp LBRC  &kp RBRC      &none   &none           &none           &kp UP_ARROW       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp INS
 &kp PIPE  &none          &none          &kp LPAR  &kp RPAR      &none   &none           &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW   &none              &none
-&none     &none          &none          &kp LPAR  &kp RPAR      &none   &none           &none           &none              &none             &none              &none
+&kp F1    &kp F2         &kp F3         &kp F4    &kp F5        &kp F6  &kp F7          &kp F8          &kp F9             &kp F10           &kp F11            &kp F12
 &trans    &trans                                  &trans        &trans  &trans          &trans                                               &kp LALT           &kp RGUI
           &none          &kp C_BRI_DN   &none     &kp C_BRI_UP  &none   &none           &none           &none              &none             &none
             >;
         };
 
-        func_layer {
-            bindings = <
-&kp ESC    &kp F1    &kp F2   &kp F3  &kp F4  &kp F5  &kp F6    &kp F7    &kp F6    &kp F9    &kp F10   &kp DEL
-&kp TAB    &kp F11   &kp F12  &none   &none   &none   &mkp MB4  &mkp MB1  &mkp MB3  &mkp MB2  &mkp MB5  &none
-&kp LSHFT  &none     &none    &none   &none   &none   &none     &none     &none     &none     &none     &none
-&kp LSHFT  &none     &none    &none   &none   &none   &none     &none     &none     &none     &none     &none
-&kp LCTRL  &kp LGUI                   &none   &none   &none     &none                         &kp LALT  &kp RGUI
-           &none     &none    &none   &none   &none   &none     &none     &none     &none     &none
-            >;
-        };
-
         config_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &sys_reset        &none              &none  &none  &none  &bootloader
-&bt BT_NXT    &none           &none         &none         &none         &none  &none             &none              &none  &none  &none  &none
-&none         &bt BT_CLR_ALL  &none         &none         &none         &none  &none             &none              &none  &none  &none  &none
-&none         &none           &none         &bt BT_CLR    &none         &none  &none             &none              &none  &none  &none  &none
-&none         &none                                       &none         &none  &ext_power EP_ON  &ext_power EP_OFF                &none  &trans
-              &none           &none         &none         &none         &none  &none             &none              &none  &none  &none
+&bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &sys_reset        &none              &none   &none   &none  &kp DE_N9
+&bt BT_NXT    &none           &none         &none         &none         &none  &kp N1            &kp N3             &kp N5  &kp N7  &none  &none
+&none         &bt BT_CLR_ALL  &none         &none         &none         &none  &kp N2            &kp N4             &kp N6  &kp N8  &none  &kp N0
+&none         &none           &none         &bt BT_CLR    &none         &none  &none             &none              &none   &none   &none  &none
+&none         &none                                       &none         &none  &ext_power EP_ON  &ext_power EP_OFF                  &none  &trans
+              &none           &none         &none         &none         &none  &none             &none              &none   &none   &none
             >;
         };
 
         MouseKeys_layer {
             bindings = <
-&tog 6  &none  &none  &none  &none  &none  &none      &none      &none  &none  &none      &none
-&none   &none  &none  &none  &none  &none  &none      &none      &none  &none  &none      &none
-&none   &none  &none  &none  &none  &none  &none      &none      &none  &none  &none      &none
-&none   &none  &none  &none  &none  &none  &none      &none      &none  &none  &none      &none
-&none   &none                &none  &none  &mkp LCLK  &mkp RCLK                &mkp MCLK  &none
-        &none  &none  &none  &none  &none  &none      &none      &none  &none  &none
-            >;
-        };
-
-        MouseTP_Set_layer {
-            bindings = <
-&tog 6                         &trans                         &trans  &trans                  &mms MS_TP_SENSITIVITY_DECR  &mms MS_TP_SENSITIVITY_INCR  &trans     &trans     &trans  &trans  &trans     &trans
-&mms MS_RESET                  &trans                         &trans  &trans                  &trans                       &trans                       &trans     &trans     &trans  &trans  &trans     &trans
-&trans                         &trans                         &trans  &trans                  &trans                       &trans                       &trans     &trans     &trans  &trans  &trans     &trans
-&mms MS_TP_PTS_THRESHOLD_DECR  &mms MS_TP_PTS_THRESHOLD_INCR  &trans  &mms MS_TP_VALUE6_DECR  &mms MS_TP_VALUE6_INCR       &trans                       &trans     &trans     &trans  &trans  &trans     &trans
-&trans                         &trans                                                         &trans                       &trans                       &mkp LCLK  &mkp RCLK                  &mkp MCLK  &tog 6
-                               &trans                         &trans  &trans                  &trans                       &trans                       &trans     &trans     &trans  &trans  &trans
+&none     &none      &none      &none      &none  &none           &none           &none           &none            &none  &none  &none
+&none     &none      &none      &none      &none  &none           &none           &mmv MOVE_UP    &none            &none  &none  &none
+&mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none  &none
+&none     &none      &none      &none      &none  &msc SCRL_DOWN  &none           &none           &none            &none  &none  &none
+&none     &none                            &none  &trans          &kp RCTRL       &kp RIGHT_ALT                           &none  &none
+          &none      &none      &none      &none  &none           &none           &none           &none            &none  &none
             >;
         };
     };
@@ -124,7 +102,7 @@
 
         conf {
             if-layers = <1 2>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
