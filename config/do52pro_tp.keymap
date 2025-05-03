@@ -43,34 +43,23 @@
 
         base_layer {
             bindings = <
-&kp N1         &kp N2             &kp N3             &kp DE_N4  &kp N5           &kp N6          &kp DE_N7  &kp DE_N8          &kp DE_N9      &kp DE_N0          &kp DE_SHARP_S   &kp DE_POUND
-&kp TAB        &kp Q              &kp W              &kp E      &kp R            &kp T           &kp Z      &mt DE_U_UMLAUT U  &kp I          &mt DE_O_UMLAUT O  &kp P            &kp BACKSPACE
-&kp LESS_THAN  &mt DE_A_UMLAUT A  &kp S              &kp D      &kp F            &kp G           &kp H      &kp J              &kp DE_K       &kp L              &kp DE_O_UMLAUT  &kp ENTER
-&mo 1          &kp Y              &kp X              &kp C      &kp V            &kp B           &kp N      &kp M              &kp SEMICOLON  &kp DE_PERIOD      &kp MINUS        &mo 1
-&kp ESCAPE     &kp LEFT_WIN                                     &mo 2            &mo 4           &kp SPACE  &mo 2                                                &kp DE_PLUS      &mo 3
-               &kp LA(C_MUTE)     &kp C_VOLUME_DOWN  &none      &kp C_VOLUME_UP  &kp LA(K_MUTE)  &none      &none              &none          &none              &none
-            >;
-        };
-
-        shift_layer {
-            bindings = <
-&kp LS(DE_N1)     &kp LS(DE_N2)              &kp LS(DE_N3)  &kp LS(DE_N4)  &kp LS(DE_N5)  &kp LS(DE_N6)  &kp LS(DE_N7)  &kp LS(DE_N8)              &kp LS(DE_N9)  &kp LS(DE_N0)              &kp LS(DE_SHARP_S)   &kp LS(DE_HASH)
-&trans            &kp LS(Q)                  &kp LS(W)      &kp LS(E)      &kp LS(R)      &kp LS(T)      &kp LS(Z)      &mt LS(DE_U_UMLAUT) LS(U)  &kp LS(I)      &mt LS(DE_O_UMLAUT) LS(O)  &kp LS(P)            &trans
-&kp GREATER_THAN  &mt LS(DE_A_UMLAUT) LS(A)  &kp LS(S)      &kp LS(D)      &kp LS(F)      &kp LS(G)      &kp LS(H)      &kp LS(J)                  &kp LS(K)      &kp LS(L)                  &kp LS(DE_O_UMLAUT)  &trans
-&trans            &kp LS(Y)                  &kp LS(X)      &kp LS(C)      &kp LS(V)      &kp LS(B)      &kp LS(N)      &kp LS(M)                  &kp SEMI       &kp COLON                  &kp UNDER            &trans
-&trans            &trans                                                   &trans         &trans         &trans         &trans                                                               &kp LS(DE_PLUS)      &trans
-                  &trans                     &trans         &trans         &trans         &trans         &trans         &trans                     &trans         &trans                     &trans
+&kp DE_N1         &kp DE_N2             &kp DE_N3          &kp DE_N4  &kp DE_N5        &kp DE_N6       &kp DE_N7  &kp DE_N8             &kp DE_N9     &kp DE_N0             &kp DE_SHARP_S   &kp DE_HASH
+&kp TAB           &kp DE_Q              &kp DE_W           &kp DE_E   &kp DE_R         &kp DE_T        &kp DE_Z   &mt DE_U_UMLAUT DE_U  &kp DE_I      &mt DE_O_UMLAUT DE_O  &kp DE_P         &kp BACKSPACE
+&kp DE_LESS_THAN  &mt DE_A_UMLAUT DE_A  &kp DE_S           &kp DE_D   &kp DE_F         &kp DE_G        &kp DE_H   &kp DE_J              &kp DE_K      &kp DE_L              &kp DE_O_UMLAUT  &kp ENTER
+&kp LSHIFT        &kp DE_Y              &kp DE_X           &kp DE_C   &kp DE_V         &kp DE_B        &kp DE_N   &kp DE_M              &kp DE_COMMA  &kp DE_PERIOD         &kp DE_MINUS     &kp RIGHT_SHIFT
+&kp ESCAPE        &kp LEFT_WIN                                        &mo 1            &mo 3           &kp SPACE  &mo 1                                                     &kp DE_PLUS      &mo 2
+                  &kp LA(C_MUTE)        &kp C_VOLUME_DOWN  &none      &kp C_VOLUME_UP  &kp LA(K_MUTE)  &none      &none                 &none         &none                 &none
             >;
         };
 
         alt_layer {
             bindings = <
-&none        &kp LA(DE_N2)   &kp LA(DE_N3)  &none     &none         &none   &kp LA(DE_N7)  &kp LA(DE_N8)   &kp LA(DE_N9)   &kp LA(DE_N0)     &kp LA(DE_SHARP_S)  &kp DE_GRAVE
-&none        &kp DE_AT_SIGN  &none          &kp LBRC  &kp RBRC      &none   &none          &none           &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp INS
-&kp DE_PIPE  &none           &none          &kp LPAR  &kp RPAR      &none   &none          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none               &none
-&kp F1       &kp F2          &kp F3         &kp F4    &kp F5        &kp F6  &kp F7         &kp F8          &kp F9          &kp F10           &kp F11             &kp F12
-&trans       &trans                                   &trans        &trans  &trans         &trans                                            &kp LALT            &kp RGUI
-             &none           &kp C_BRI_DN   &none     &kp C_BRI_UP  &none   &none          &none           &none           &none             &none
+&none        &kp LA(DE_N2)   &kp LA(DE_N3)  &none                    &none                     &none   &kp LA(DE_N7)  &kp LA(DE_N8)   &kp LA(DE_N9)   &kp LA(DE_N0)        &kp LA(DE_SHARP_S)    &kp DE_GRAVE
+&none        &kp DE_AT_SIGN  &none          &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &none   &none          &none           &kp UP_ARROW    &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET  &kp INS
+&kp DE_PIPE  &none           &none          &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &none   &none          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &none                 &none
+&kp F1       &kp F2          &kp F3         &kp F4                   &kp F5                    &kp F6  &kp F7         &kp F8          &kp F9          &kp F10              &kp F11               &kp F12
+&trans       &trans                                                  &trans                    &trans  &trans         &trans                                               &kp LALT              &kp RGUI
+             &none           &kp C_BRI_DN   &none                    &kp C_BRI_UP              &none   &none          &none           &none           &none                &none
             >;
         };
 
@@ -101,8 +90,8 @@
         compatible = "zmk,conditional-layers";
 
         conf {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 1>;
+            then-layer = <2>;
         };
     };
 };
