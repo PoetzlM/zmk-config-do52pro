@@ -1,26 +1,14 @@
 layout: {zmk_keyboard: do52pro_tp}
 layers:
   base:
-  - ['(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 1 AND EXCLAMATION))', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 2 AND AT))', '(ZMK HID USAGE(HID
-      USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH))', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))', '5', '6', '(ZMK HID USAGE(HID USAGE
-      KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND))', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK))', '(ZMK HID USAGE(HID USAGE KEY, HID
-      USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS))', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))', '(LS(ZMK HID USAGE(HID USAGE
-      KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))', DELETE]
+  - ['1', '2', '3', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))', '5', '6', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND))',
+    '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK))', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS))', '(ZMK
+      HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))', '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE))', '#']
   - [↹, Q, W, E, R, T, Z, '&mt (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)) U', I, '&mt (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))
-      O', P, ⌫]
-  - - CAPSLOCK
-    - '&mt (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)) A'
-    - S
-    - D
-    - F
-    - G
-    - H
-    - J
-    - K
-    - L
-    - {t: ;, s: ':'}
-    - ENTER
-  - - shiftLayer
+      O', P, +]
+  - [<, '&mt (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)) A', S, D, F, G, H, J, K, L, '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY
+      KEYBOARD SEMICOLON AND COLON))', ENTER]
+  - - shift
     - Y
     - X
     - C
@@ -31,251 +19,131 @@ layers:
     - {t: ;, s: ':'}
     - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD PERIOD AND GREATER THAN))
     - {t: '-', s: _}
-    - ⇧
-  - [⎋, LEFT WIN, lower, '&mkp LCLK', SPACE, upper, DELETE, ⌃, Alt+LEFT ARROW, 'VOL
+    - shift
+  - - ⎋
+    - LEFT WIN
+    - alt
+    - MouseKeys
+    - SPACE
+    - alt
+    - {t: DELETE, h: BACKSPACE}
+    - config
+    - 'Alt+VOL
 
-      DOWN', PLAY PAUSE, 'VOL
+      MUTE'
+    - 'VOL
 
-      UP']
-  - [↠, ←, ↓, 'VOL
+      DOWN'
+    - ''
+    - 'VOL
 
-      MUTE', ↑, →]
-  lower:
-  - - {t: '`', s: '~'}
-    - F1
-    - F2
-    - F3
-    - F4
-    - F5
-    - F6
-    - F7
-    - F8
-    - F9
-    - F10
-    - F11
-  - [Alt+↹, Alt+Q, Alt+W, Alt+E, Alt+R, '|', HOME, END, PAGE DOWN, PAGE UP, '', F12]
-  - - ' '
-    - ''
-    - ^
-    - {t: '=', s: +}
-    - +
-    - '~'
-    - ''
-    - ''
-    - ''
-    - Gui+L
-    - ''
-    - .
-  - - ⇧
-    - ''
-    - ^
-    - {t: '=', s: +}
-    - +
-    - '~'
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: \, s: '|'}
-    - PRINTSCREEN
-  - - ⌃
-    - ⌘
-    - {t: ' ', type: held}
-    - ' '
-    - ' '
-    - ' '
-    - ⎇
-    - ⌘
-    - PREV
-    - VOL DN
-    - PP
-    - VOL UP
-  - [NEXT, PREV, VOL DN, PP, VOL UP, NEXT]
-  upper:
-  - - {t: '`', s: '~'}
-    - '!'
-    - '@'
-    - '#'
+      UP'
+  - [Alt+MUTE, '', '', '', '', '']
+  shift:
+  - - '!'
+    - '"'
+    - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH)))
     - $
     - '%'
-    - ^
-    - ''
-    - ''
-    - ''
-    - {t: '-', s: _}
+    - '&'
+    - /
+    - (
+    - )
     - {t: '=', s: +}
-  - - ↹
+    - '?'
+    - .
+  - [' ', Sft+Q, Sft+W, Sft+E, Sft+R, Sft+T, Sft+Z, '&mt LS((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))) LS(U)', Sft+I, '&mt
+      LS((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))) LS(O)', Sft+P, '*']
+  - ['>', '&mt LS((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))) LS(A)', Sft+S, Sft+D, Sft+F, Sft+G, Sft+H, Sft+J, Sft+K, Sft+L, 'Sft+(ZMK
+      HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))', ' ']
+  - - {t: ' ', type: held}
+    - Sft+Y
+    - Sft+X
+    - Sft+C
+    - Sft+V
+    - Sft+B
+    - Sft+N
+    - Sft+M
+    - {t: ;, s: ':'}
+    - ':'
+    - _
+    - ' '
+  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+  - [' ', ' ', ' ', ' ', ' ', ' ']
+  alt:
+  - - ''
+    - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 2 AND AT)))
+    - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH)))
+    - ''
     - ''
     - ''
     - '{'
-    - '}'
-    - {t: '`', s: '~'}
-    - ''
-    - ''
-    - UP ARROW
-    - '['
+    - {t: '[', s: '{'}
     - ']'
-    - INS
-  - [⇧, '', '', (, ), '', '', LEFT ARROW, DOWN ARROW, RIGHT ARROW, '', .]
-  - [⇧, '', '', (, ), '', '', '', '', '', '', '']
-  - - ⌃
-    - ⌘
-    - ' '
-    - ' '
+    - '}'
+    - \
+    - {t: '`', s: '~'}
+  - ['', '@', '', '{', '}', '', '', '', UP ARROW, '[', ']', INS]
+  - ['|', '', '', (, ), '', '', LEFT ARROW, DOWN ARROW, RIGHT ARROW, '', '']
+  - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
+  - - ' '
     - ' '
     - {t: ' ', type: held}
+    - ' '
+    - ' '
+    - ' '
     - ⎇
     - ⌘
     - ''
     - BRI DN
     - ''
     - BRI UP
-  - ['', '', BRI DN, '', BRI UP, '']
-  func:
-  - [ESC, F1, F2, F3, F4, F5, F6, F7, F6, F9, F10, ⌦]
-  - [↹, F11, F12, '', '', '', '&mkp MB4', '&mkp MB1', '&mkp MB3', '&mkp MB2', '&mkp MB5', '']
-  - [⇧, '', '', '', '', '', '', '', '', '', '', '']
-  - [⇧, '', '', '', '', '', '', '', '', '', '', '']
-  - [⌃, ⌘, '', '', '', '', ⎇, ⌘, '', '', '', '']
   - ['', '', '', '', '', '']
   config:
-  - - '&bootloader'
-    - {t: base, h: toggle}
-    - {t: lower, h: toggle}
-    - {t: upper, h: toggle}
-    - ''
-    - ''
-    - {t: BT, h: '0'}
+  - - {t: BT, h: '0'}
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
     - {t: BT, h: '3'}
+    - {t: BT, h: '4'}
     - ''
-    - '&bootloader'
-  - ['', '', '', '', '', '', '', BT PRV, BT NXT, BT DISC, '', '']
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - EP OFF
+    - '&sys_reset'
+    - ''
+    - ''
+    - ''
+    - ''
+    - '&mms MS_RESET'
+  - [BT NXT, '', '', '', '', '', '&mms MS_TP_SENSITIVITY_INCR', '&mms MS_TP_VALUE6_INCR', '&mms MS_TP_NEG_INERTIA_INCR', '&mms MS_TP_PTS_THRESHOLD_INCR', '', '']
+  - ['', BT CLR ALL, '', '', '', '', '&mms MS_TP_SENSITIVITY_DECR', '&mms MS_TP_VALUE6_DECR', '&mms MS_TP_NEG_INERTIA_DECR', '&mms MS_TP_PTS_THRESHOLD_DECR', '',
+    '&mms MS_LOG']
+  - ['', '', '', BT CLR, '', '', '', '', '', '', '', '']
+  - - ''
+    - ''
+    - ''
+    - ''
     - EP ON
-    - {type: held}
+    - EP OFF
     - ''
-    - ''
-    - {type: held}
-    - BT CLR
-    - BT CLR ALL
+    - {t: ' ', type: held}
     - ''
     - ''
     - ''
     - ''
   - ['', '', '', '', '', '']
   MouseKeys:
-  - - {t: MouseTP_Set, h: toggle}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '&mkp LCLK', '&mkp RCLK', '&mkp MCLK', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '&mmv MOVE_UP', '', '', '', '']
+  - ['&mkp MB4', '&mkp LCLK', '&mkp MCLK', '&mkp RCLK', '', '&msc SCRL_UP', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '', '', '']
+  - ['', '', '', '', '', '&msc SCRL_DOWN', '', '', '', '', '', '']
+  - - ''
+    - ''
+    - ''
+    - {t: ' ', type: held}
+    - ⌃
+    - ⎇
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
   - ['', '', '', '', '', '']
-  MouseTP:
-  - - {t: MouseTP_Set, h: toggle}
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', lower, ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', '&mkp LCLK', '&mkp RCLK', '&mkp MCLK', ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ']
-  MouseTP_Keys:
-  - - {t: MouseTP_Set, h: toggle}
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', lower, ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - - ' '
-    - ' '
-    - ' '
-    - ' '
-    - '&mkp LCLK'
-    - '&mkp RCLK'
-    - '&mkp MCLK'
-    - {t: MouseTP_Keys, h: toggle}
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-  - [' ', ' ', ' ', ' ', ' ', ' ']
-  MouseTP_Set:
-  - - {t: MouseTP_Set, h: toggle}
-    - ' '
-    - ' '
-    - ' '
-    - '&mms MS_TP_SENSITIVITY_DECR'
-    - '&mms MS_TP_SENSITIVITY_INCR'
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-  - ['&mms MS_RESET', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - ['&mms MS_TP_PTS_THRESHOLD_DECR', '&mms MS_TP_PTS_THRESHOLD_INCR', ' ', '&mms MS_TP_VALUE6_DECR', '&mms MS_TP_VALUE6_INCR', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - - ' '
-    - ' '
-    - ' '
-    - ' '
-    - '&mkp LCLK'
-    - '&mkp RCLK'
-    - '&mkp MCLK'
-    - {t: MouseTP_Set, h: toggle}
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-  - [' ', ' ', ' ', ' ', ' ', ' ']
-  shiftLayer:
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-  - - {t: ' ', type: held}
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-    - ' '
-  - [' ', ' ', ' ', ' ', ' ', ' ', BACKSPACE, ' ', ' ', ' ', ' ', ' ']
-  - [' ', ' ', ' ', ' ', ' ', ' ']

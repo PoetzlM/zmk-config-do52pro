@@ -41,3 +41,18 @@ pipx install keymap-drawer
 
 > https://github.com/infused-kim/kb_zmk_ps2_mouse_trackpoint_driver-zmk_config/
 
+## configuration key maps
+
+Needed to be set manualy, behavior editing is not supported in keymap editor
+- &mms MS_TP_SENSITIVITY_INCR
+- &mms MS_TP_SENSITIVITY_DECR
+- &mms MS_TP_VALUE6_INCR
+- &mms MS_TP_VALUE6_DECR
+- &mms MS_TP_NEG_INERTIA_INCR
+- &mms MS_TP_NEG_INERTIA_DECR
+- &mms MS_TP_PTS_THRESHOLD_INCR
+- &mms MS_TP_PTS_THRESHOLD_DECR
+- &mms MS_RESET
+- &mms MS_LOG
+
+
