@@ -43,12 +43,12 @@
 
         base_layer {
             bindings = <
-&kp DE_N1         &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9     &kp DE_N0      &kp DE_SHARP_S   &kp DE_HASH
-&kp TAB           &kp DE_Q   &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T   &kp DE_Z   &kp DE_U   &kp DE_I      &kp DE_O       &kp DE_P         &kp BACKSPACE
-&kp DE_LESS_THAN  &kp DE_A   &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G   &kp DE_H   &kp DE_J   &kp DE_K      &kp DE_L       &kp DE_O_UMLAUT  &kp ENTER
-&mo 1             &kp DE_Y   &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B   &kp DE_N   &kp DE_M   &kp DE_COMMA  &kp DE_PERIOD  &kp DE_MINUS     &mo 1
-&lt 6 LEFT_WIN    &mo 5                            &mo 2      &mo 4      &kp SPACE  &mo 2                                   &kp DE_PLUS      &mo 3
-                  &kp B      &kp A      &none      &kp A      &kp B      &none      &kp A      &none         &kp A          &none
+&kp DE_N1         &kp DE_N2           &kp DE_N3  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9     &kp DE_N0      &kp DE_SHARP_S   &kp DE_HASH
+&kp TAB           &kp DE_Q            &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T   &kp DE_Z   &kp DE_U   &kp DE_I      &kp DE_O       &kp DE_P         &kp BACKSPACE
+&kp DE_LESS_THAN  &kp DE_A            &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G   &kp DE_H   &kp DE_J   &kp DE_K      &kp DE_L       &kp DE_O_UMLAUT  &kp ENTER
+&mo 1             &kp DE_Y            &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B   &kp DE_N   &kp DE_M   &kp DE_COMMA  &kp DE_PERIOD  &kp DE_MINUS     &mo 1
+&mo 5             &lt 6 LEFT_COMMAND                        &mo 2      &mo 4      &kp SPACE  &mo 2                                   &kp DE_PLUS      &mo 3
+                  &kp B               &kp A      &none      &kp A      &kp B      &none      &kp A      &none         &kp A          &none
             >;
         };
 
@@ -112,8 +112,8 @@
 &to 0               &trans              &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans
 &trans              &kp LG(LS(Q))       &kp LG(LS(W))  &kp LG(LS(E))  &kp LG(LS(R))  &kp LG(LS(T))  &kp LG(LS(Z))  &kp LG(LS(U))  &kp LG(LS(I))  &kp LG(LS(O))  &kp LG(LS(P))  &trans
 &trans              &kp LG(LS(A))       &kp LG(LS(S))  &kp LG(LS(D))  &kp LG(LS(F))  &kp LG(LS(G))  &kp LG(LS(H))  &kp LG(LS(J))  &kp LG(LS(K))  &kp LG(LS(L))  &trans         &trans
-&kp LC(LS(ESCAPE))  &kp LG(LS(Y))       &kp LG(LS(X))  &kp LG(LS(C))  &kp LG(LS(V))  &kp LG(LS(B))  &kp LG(LS(N))  &kp LG(LS(M))  &trans         &trans         &trans         &trans
-&none               &kp LA(LC(DELETE))                                &trans         &trans         &trans         &trans                                       &trans         &trans
+&kp LC(LS(ESCAPE))  &kp LG(LS(Y))       &kp LG(LS(X))  &kp LG(LS(C))  &kp LG(LS(V))  &kp LG(LS(B))  &kp LG(LS(N))  &kp LG(LS(M))  &trans         &trans         &trans         &none
+&none               &kp LA(LC(DELETE))                                &none          &none          &trans         &none                                        &trans         &none
                     &trans              &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans
             >;
         };
