@@ -58,7 +58,7 @@
 &kp TAB              &kp LS(DE_Q)   &kp LS(DE_W)   &kp LS(DE_E)   &kp LS(DE_R)   &kp LS(DE_T)   &kp LS(DE_Z)   &kp LS(DE_U)   &kp LS(DE_I)      &kp LS(DE_O)       &kp LS(DE_P)         &kp DELETE
 &kp DE_GREATER_THAN  &kp LS(DE_A)   &kp LS(DE_S)   &kp LS(DE_D)   &kp LS(DE_F)   &kp LS(DE_G)   &kp LS(DE_H)   &kp LS(DE_J)   &kp LS(DE_K)      &kp LS(DE_L)       &kp LS(DE_O_UMLAUT)  &kp ENTER
 &none                &kp LS(DE_Y)   &kp LS(DE_X)   &kp LS(DE_C)   &kp LS(DE_V)   &kp LS(DE_B)   &kp LS(DE_N)   &kp LS(DE_M)   &kp LS(DE_COMMA)  &kp LS(DE_PERIOD)  &kp LS(DE_MINUS)     &none
-&trans               &none                                        &none          &none          &trans         &none                                               &kp LS(DE_PLUS)      &none
+&none                &none                                        &none          &none          &trans         &none                                               &kp LS(DE_PLUS)      &none
                      &kp B          &kp A          &none          &kp A          &kp B          &none          &kp A          &none             &kp A              &none
             >;
         };
@@ -69,7 +69,7 @@
 &none           &kp DE_AT_SIGN     &none              &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &none  &none          &kp DE_U_UMLAUT  &kp UP_ARROW    &kp DE_O_UMLAUT  &none               &kp INS
 &kp DE_PIPE     &kp DE_A_UMLAUT    &none              &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &none  &none          &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none               &none
 &kp LEFT_SHIFT  &none              &none              &none                    &none                     &none  &none          &kp DE_MICRO     &none           &none            &none               &none
-&trans          &none                                                          &none                     &none  &trans         &none                                             &kp DE_TILDE        &none
+&none           &none                                                          &none                     &none  &trans         &none                                             &kp DE_TILDE        &none
                 &none              &kp C_BRI_DN       &none                    &kp C_BRI_UP              &none  &none          &none            &none           &none            &none
             >;
         };
@@ -102,7 +102,7 @@
 &kp TAB             &kp LC(Q)   &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)  &kp LC(Z)  &kp LC(U)  &kp LC(I)  &kp LC(O)  &trans   &trans
 &kp LA(LC(DELETE))  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(H)  &kp LC(J)  &kp LC(K)  &kp LC(L)  &trans   &trans
 &kp LS(LC(ESCAPE))  &kp LC(Y)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &kp LC(N)  &kp LC(M)  &trans     &trans     &trans   &none
-&none               &kp ESCAPE                        &none      &none      &none      &none                            &trans   &none
+&none               &kp ESCAPE                        &none      &none      &none      &none                            &none    &none
                     &trans      &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
