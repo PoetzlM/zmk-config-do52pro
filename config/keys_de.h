@@ -5,8 +5,8 @@
  *
  * UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
  * 
- * See Terms of Use for definitions of Unicode Inc.'s
- * Data Files and Software.
+ * See Terms of Use <https://www.unicode.org/copyright.html>
+ * for definitions of Unicode Inc.’s Data Files and Software.
  * 
  * NOTICE TO USER: Carefully read the following legal agreement.
  * BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
@@ -18,7 +18,7 @@
  * 
  * COPYRIGHT AND PERMISSION NOTICE
  * 
- * Copyright © 1991-2022 Unicode, Inc. All rights reserved.
+ * Copyright © 1991-2023 Unicode, Inc. All rights reserved.
  * Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
  * 
  * Permission is hereby granted, free of charge, to any person obtaining
@@ -324,7 +324,7 @@
 #define DE_SZ (DE_SHARP_S)
 
 /* ẞ */
-#define DE_CAPITAL_SHARP_S (RA(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))))
+#define DE_CAPITAL_SHARP_S (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))))
 #define DE_CAPITAL_ESZETT (DE_CAPITAL_SHARP_S)
 #define DE_CAPITAL_SZ (DE_CAPITAL_SHARP_S)
 
