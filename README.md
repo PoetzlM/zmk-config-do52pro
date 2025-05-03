@@ -6,6 +6,8 @@
 
 > https://nickcoutsos.github.io/keymap-editor/
 
+after using the editor, the pointing lib has to be commented out in the *.keymap file in config folder
+`//#include <dt-bindings/zmk/pointing.h>`
 
 # ZMK Localization
 
