@@ -33,28 +33,66 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 //#include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        tab_dance_layer_shift_fn: tab_dance_layer_shift_fn {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_DANCE_LAYER_SHIFT_FN";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 5>;
+        };
+
+        tf_layer_4_ShiftWinKey: tf_layer_4_ShiftWinKey {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TF_LAYER_4_SHIFTWINKEY";
+            #binding-cells = <0>;
+            bindings = <&mo 4>, <&kp LS(LEFT_WIN)>;
+        };
+
+        td_space_ShiftWinKey: td_space_ShiftWinKey {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SPACE_SHIFTWINKEY";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp LS(LEFT_WIN)>;
+        };
+
+        td_N5_F5: td_N5_F5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N5_F5";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N5>, <&kp F5>;
+        };
+
+        td_N1_F1_ESC: td_N1_F1_ESC {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N1_F1_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N1>, <&kp F1>, <&kp ESCAPE>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             bindings = <
-&kp DE_N1         &kp DE_N2     &kp DE_N3  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9     &kp DE_N0      &kp DE_SHARP_S   &kp DE_HASH
-&kp TAB           &kp DE_Q      &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T   &kp DE_Z   &kp DE_U   &kp DE_I      &kp DE_O       &kp DE_P         &kp BACKSPACE
-&kp DE_LESS_THAN  &kp DE_A      &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G   &kp DE_H   &kp DE_J   &kp DE_K      &kp DE_L       &kp DE_O_UMLAUT  &kp ENTER
-&mo 1             &kp DE_Y      &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B   &kp DE_N   &kp DE_M   &kp DE_COMMA  &kp DE_PERIOD  &kp DE_MINUS     &mo 1
-&mo 5             &kt LS(LWIN)                        &mo 2      &mo 4      &kp SPACE  &mo 2                                   &kp DE_PLUS      &mo 3
-                  &kp B         &kp A      &none      &kp A      &kp B      &none      &kp A      &none         &kp A          &none
+&td_N1_F1_ESC              &kp DE_N2  &kp DE_N3  &kp DE_N4  &td_N5_F5  &kp DE_N6                &kp DE_N7              &kp DE_N8  &kp DE_N9     &kp DE_N0      &kp DE_SHARP_S   &kp BACKSPACE
+&kp TAB                    &kp DE_Q   &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T                 &kp DE_Z               &kp DE_U   &kp DE_I      &kp DE_O       &kp DE_P         &kp DE_HASH
+&kp DE_LESS_THAN           &kp DE_A   &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G                 &kp DE_H               &kp DE_J   &kp DE_K      &kp DE_L       &kp DE_O_UMLAUT  &kp ENTER
+&tab_dance_layer_shift_fn  &kp DE_Y   &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B                 &kp DE_N               &kp DE_M   &kp DE_COMMA  &kp DE_PERIOD  &kp DE_MINUS     &tab_dance_layer_shift_fn
+&none                      &none                            &mo 2      &tf_layer_4_ShiftWinKey  &td_space_ShiftWinKey  &mo 2                                   &kp DE_PLUS      &mo 3
+                           &kp B      &kp A      &none      &kp A      &kp B                    &none                  &kp A      &none         &kp A          &none
             >;
         };
 
         shift_layer {
             bindings = <
-&kp LS(DE_N1)        &kp LS(DE_N2)  &kp LS(DE_N3)  &kp LS(DE_N4)  &kp LS(DE_N5)  &kp LS(DE_N6)  &kp LS(DE_N7)  &kp LS(DE_N8)  &kp LS(DE_N9)     &kp LS(DE_N0)      &kp LS(DE_SHARP_S)   &kp LS(DE_HASH)
-&kp TAB              &kp LS(DE_Q)   &kp LS(DE_W)   &kp LS(DE_E)   &kp LS(DE_R)   &kp LS(DE_T)   &kp LS(DE_Z)   &kp LS(DE_U)   &kp LS(DE_I)      &kp LS(DE_O)       &kp LS(DE_P)         &kp DELETE
+&kp LS(DE_N1)        &kp LS(DE_N2)  &kp LS(DE_N3)  &kp LS(DE_N4)  &kp LS(DE_N5)  &kp LS(DE_N6)  &kp LS(DE_N7)  &kp LS(DE_N8)  &kp LS(DE_N9)     &kp LS(DE_N0)      &kp LS(DE_SHARP_S)   &kp DELETE
+&kp TAB              &kp LS(DE_Q)   &kp LS(DE_W)   &kp LS(DE_E)   &kp LS(DE_R)   &kp LS(DE_T)   &kp LS(DE_Z)   &kp LS(DE_U)   &kp LS(DE_I)      &kp LS(DE_O)       &kp LS(DE_P)         &kp LS(DE_HASH)
 &kp DE_GREATER_THAN  &kp LS(DE_A)   &kp LS(DE_S)   &kp LS(DE_D)   &kp LS(DE_F)   &kp LS(DE_G)   &kp LS(DE_H)   &kp LS(DE_J)   &kp LS(DE_K)      &kp LS(DE_L)       &kp LS(DE_O_UMLAUT)  &kp ENTER
 &none                &kp LS(DE_Y)   &kp LS(DE_X)   &kp LS(DE_C)   &kp LS(DE_V)   &kp LS(DE_B)   &kp LS(DE_N)   &kp LS(DE_M)   &kp LS(DE_COMMA)  &kp LS(DE_PERIOD)  &kp LS(DE_MINUS)     &none
 &none                &none                                        &none          &none          &trans         &none                                               &kp LS(DE_PLUS)      &none
