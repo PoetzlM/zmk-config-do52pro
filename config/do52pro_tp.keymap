@@ -33,30 +33,26 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 //#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
-        tab_dance_layer_shift_fn: tab_dance_layer_shift_fn {
+        td_ly_shift_ly_fn: td_ly_shift_ly_fn {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAB_DANCE_LAYER_SHIFT_FN";
+            label = "TD_LY_SHIFT_LY_FN";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 5>;
         };
 
-        tf_layer_4_ShiftWinKey: tf_layer_4_ShiftWinKey {
+        td_ly_alt_ShiftWin: td_ly_alt_ShiftWin {
             compatible = "zmk,behavior-tap-dance";
-            label = "TF_LAYER_4_SHIFTWINKEY";
+            label = "TD_LY_ALT_SHIFTWIN";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&kp LS(LEFT_WIN)>;
-        };
+            bindings = <&mo 2>, <&sk LS(LEFT_WIN)>;
 
-        td_space_ShiftWinKey: td_space_ShiftWinKey {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SPACE_SHIFTWINKEY";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp LS(LEFT_WIN)>;
+            tapping-term-ms = <150>;
         };
 
         td_N5_F5: td_N5_F5 {
@@ -79,12 +75,12 @@
 
         base_layer {
             bindings = <
-&td_N1_F1_ESC              &kp DE_N2  &kp DE_N3  &kp DE_N4  &td_N5_F5  &kp DE_N6                &kp DE_N7              &kp DE_N8  &kp DE_N9     &kp DE_N0      &kp DE_SHARP_S   &kp BACKSPACE
-&kp TAB                    &kp DE_Q   &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T                 &kp DE_Z               &kp DE_U   &kp DE_I      &kp DE_O       &kp DE_P         &kp DE_HASH
-&kp DE_LESS_THAN           &kp DE_A   &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G                 &kp DE_H               &kp DE_J   &kp DE_K      &kp DE_L       &kp DE_O_UMLAUT  &kp ENTER
-&tab_dance_layer_shift_fn  &kp DE_Y   &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B                 &kp DE_N               &kp DE_M   &kp DE_COMMA  &kp DE_PERIOD  &kp DE_MINUS     &tab_dance_layer_shift_fn
-&none                      &none                            &mo 2      &tf_layer_4_ShiftWinKey  &td_space_ShiftWinKey  &mo 2                                   &kp DE_PLUS      &mo 3
-                           &kp B      &kp A      &none      &kp A      &kp B                    &none                  &kp A      &none         &kp A          &none
+&td_N1_F1_ESC     &kp DE_N2  &kp DE_N3  &kp DE_N4  &td_N5_F5            &kp DE_N6  &kp DE_N7  &kp DE_N8            &kp DE_N9     &kp DE_N0      &kp DE_SHARP_S   &kp BACKSPACE
+&kp TAB           &kp DE_Q   &kp DE_W   &kp DE_E   &kp DE_R             &kp DE_T   &kp DE_Z   &kp DE_U             &kp DE_I      &kp DE_O       &kp DE_P         &kp DE_HASH
+&kp DE_LESS_THAN  &kp DE_A   &kp DE_S   &kp DE_D   &kp DE_F             &kp DE_G   &kp DE_H   &kp DE_J             &kp DE_K      &kp DE_L       &kp DE_O_UMLAUT  &kp ENTER
+&mo 1             &kp DE_Y   &kp DE_X   &kp DE_C   &kp DE_V             &kp DE_B   &kp DE_N   &kp DE_M             &kp DE_COMMA  &kp DE_PERIOD  &kp DE_MINUS     &mo 1
+&none             &none                            &td_ly_alt_ShiftWin  &mo 4      &kp SPACE  &td_ly_alt_ShiftWin                               &kp DE_PLUS      &mo 3
+                  &kp B      &kp A      &none      &kp A                &kp B      &none      &kp A                &none         &kp A          &none
             >;
         };
 
